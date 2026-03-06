@@ -1,4 +1,4 @@
-# 🔍 Project: TryHackMe — OhSINT
+# Project: TryHackMe — OhSINT
 
 > **Platform:** TryHackMe | **Room:** OhSINT | **Difficulty:** Easy<br>
 > **MITRE Tactic:** TA0043 — Reconnaissance<br>
@@ -32,3 +32,21 @@ This challenge simulates the **pre-attack reconnaissance phase** used by real th
 - **Wigle.net** — BSSID-to-location geolocation mapping
 - **Browser DevTools** — HTML/CSS source inspection to uncover hidden content
 - **WordPress** — blog platform analysis for exposed personal information
+
+## 🔍 Steps Performed
+**Step 1 — Metadata Extraction**\
+**MITRE: T1592 — Gather Victim Host Information**\
+The first action when handling any unknown file is to examine its metadata — this is standard practice in both OSINT investigations and DFIR work.
+```
+exiftool WindowsXP.jpg
+```
+Analysing the EXIF data revealed an attributed field that provided a starting username — the initial pivot point for all further investigation.\
+![Screenshot of the output from the exiftool]()
+
+**Step 2 — Username Pivoting & Social Media OSINT**\
+**MITRE: T1593 — Search Open Websites/Domains | T1593.001 — Social Media**\
+With a username in hand, the next step was passive reconnaissance — searching publicly available sources without any direct interaction with systems.
+```
+Google search: [discovered username]
+```
+This surfaced several publicly accessible profiles across different platforms, each containing additional clues that could be chained together
