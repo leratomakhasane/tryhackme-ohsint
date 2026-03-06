@@ -50,3 +50,19 @@ With a username in hand, the next step was passive reconnaissance — searching 
 Google search: [discovered username]
 ```
 This surfaced several publicly accessible profiles across different platforms, each containing additional clues that could be chained together
+
+**Step 3 — Geolocation via BSSID**\
+**MITRE: T1591.001 — Determine Physical Locations**\
+One of the discovered profiles contained a network identifier — specifically a BSSID (Wi-Fi access point hardware address). This type of data, when cross-referenced with public wireless databases, can resolve to a physical location.
+
+**Step 4 — Hidden Data Discovery**\
+**MITRE: T1027 — Obfuscated Files or Information**\
+A personal blog associated with the target contained information that was not immediately visible — only accessible by inspecting the raw page source rather than the rendered view.
+
+🗺️ MITRE ATT&CK Mapping
+Technique ID | Name | Application
+--- |--- | ---
+TA0043 | Reconnaissance | Overarching tactic for the entire room
+T1592 | Gather Victim Host Information | EXIF metadata extraction via ExifTool
+T1593 | Search Open Websites/Domains | Username pivot across public platforms
+T1593.001 | Social Media | Social media profile enumeration
