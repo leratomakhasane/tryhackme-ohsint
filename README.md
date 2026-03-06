@@ -59,10 +59,20 @@ One of the discovered profiles contained a network identifier — specifically a
 **MITRE: T1027 — Obfuscated Files or Information**\
 A personal blog associated with the target contained information that was not immediately visible — only accessible by inspecting the raw page source rather than the rendered view.
 
-🗺️ MITRE ATT&CK Mapping
+**🗺️ MITRE ATT&CK Mapping**
 Technique ID | Name | Application
 --- |--- | ---
 TA0043 | Reconnaissance | Overarching tactic for the entire room
 T1592 | Gather Victim Host Information | EXIF metadata extraction via ExifTool
 T1593 | Search Open Websites/Domains | Username pivot across public platforms
 T1593.001 | Social Media | Social media profile enumeration
+T1591 | Gather Victim Org Information | Public repository and blog analysis
+T1591.001 | Determine Physical Locations | BSSID geolocation via wireless database
+T1027 | Obfuscated Files or Information | Hidden data in HTML/CSS source
+
+**📚 Resources**\
+[MITRE ATT&CK — TA0043 Reconnaissance](https://attack.mitre.org/tactics/TA0043/)\
+[MITRE ATT&CK — T1593 Search Open Websites/Domains](https://attack.mitre.org/techniques/T1593/)\
+[ExifTool Documentation](https://exiftool.org/)\
+[Wigle.net — Wireless Network Mapping](https://wigle.net/)\
+[TryHackMe OhSINT Room](https://tryhackme.com/room/ohsint)
