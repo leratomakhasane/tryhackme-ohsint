@@ -41,7 +41,8 @@ The first action when handling any unknown file is to examine its metadata — t
 exiftool WindowsXP.jpg
 ```
 Analysing the EXIF data revealed an attributed field that provided a starting username — the initial pivot point for all further investigation.\
-![Screenshot of the output from the exiftool]()
+![Screenshot of the output from the exiftool](assets/exiftool.png)
+![Screenshot of the full output of the exiftool](asstes/exiftool-full.png)
 
 **Step 2 — Username Pivoting & Social Media OSINT**\
 **MITRE: T1593 — Search Open Websites/Domains | T1593.001 — Social Media**\
@@ -50,14 +51,21 @@ With a username in hand, the next step was passive reconnaissance — searching 
 Google search: [discovered username]
 ```
 This surfaced several publicly accessible profiles across different platforms, each containing additional clues that could be chained together
+![Screenshot of the full output of the exiftool](asstes/google-search.png)
+![Screenshot of the full output of the exiftool](asstes/blog.png)
+![Screenshot of the full output of the exiftool](asstes/twitter.png)
+![Screenshot of the full output of the exiftool](asstes/twitter-full.png)
+![Screenshot of the full output of the exiftool](asstes/github.png)
 
 **Step 3 — Geolocation via BSSID**\
 **MITRE: T1591.001 — Determine Physical Locations**\
 One of the discovered profiles contained a network identifier — specifically a BSSID (Wi-Fi access point hardware address). This type of data, when cross-referenced with public wireless databases, can resolve to a physical location.
+![Screenshot of the full output of the exiftool](asstes/location.png)
 
 **Step 4 — Hidden Data Discovery**\
 **MITRE: T1027 — Obfuscated Files or Information**\
 A personal blog associated with the target contained information that was not immediately visible — only accessible by inspecting the raw page source rather than the rendered view.
+![Screenshot of the full output of the exiftool](asstes/source-code.png)
 
 **🗺️ MITRE ATT&CK Mapping**
 Technique ID | Name | Application
