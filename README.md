@@ -50,7 +50,7 @@ With a username in hand, the next step was passive reconnaissance — searching 
 ```
 Google search: [discovered username]
 ```
-This surfaced several publicly accessible profiles across different platforms, each containing additional clues that could be chained together
+This surfaced several publicly accessible profiles across different platforms, each containing additional clues that could be chained together\
 ![Screenshot of the full output of the exiftool](assets/google-search.png)
 ![Screenshot of the full output of the exiftool](assets/blog.png)
 ![Screenshot of the full output of the exiftool](assets/twitter.png)
